@@ -19,7 +19,8 @@
 	align-items: center;
 }
 .commandText {
-	font-size: 17px;
+	font-size: 20px;
+	margin-left: 7px;
 }
 * {
 	padding: 0;
@@ -51,7 +52,7 @@
 }
 .menuText {
 	text-decoration: none;
-	color: azure;
+	color: rgb(5, 5, 5);
 	font-family: MyFont;
 }
 @font-face {
@@ -139,22 +140,29 @@
 	}
 }
 .upgradeCards {
+	width: calc(100vw - 40px);
 	padding: 20px;
 }
-.upgradeCards p {
-	font-size: 18px;
+.caption {
+	font-size: 20px;
 	font-weight: 700;
 	font-family: MyFont;
+	margin-bottom: 10px;
+	margin-top: 10px;
 }
 .card {
 	width: 28%;
-	height: 120px;
+	height: 125px;
 	background-color: #a3c1f7;
 	border-radius: 10px;
 	font-weight: 600;
 	font-family: MyFont;
 	color: #faf9f9;
-	font-size: 13px;
+	font-size: 16px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
 }
 .containerUpgradeCards {
 	display: flex;
@@ -162,12 +170,102 @@
 }
 .imageCard {
 	width: 90%;
-	margin-left: 5%;
 	height: 90px;
 	border-radius: 10px;
 	margin-top: 7%;
 }
+.imageCard p {
+	background-color: rgba(138, 146, 153, 0.61);
+	width: 38px;
+	border-radius: 5px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 2px;
+}
 .card:nth-child(1) .imageCard {
-	background-image: url(icons8-сова-66.png);
+	background-image: url(сова.card.png);
 	background-size: cover;
+}
+.card:nth-child(2) .imageCard {
+	background-image: url(сова.card1.png);
+	background-size: cover;
+}
+.card:nth-child(3) .imageCard {
+	background-image: url(сова.card2.png);
+	background-size: cover;
+}
+.dialog {
+	position: fixed;
+	inset: auto 0 0 0;
+	border: 4px solid rgba(118, 255, 248, 0.671);
+	border-bottom: 0px;
+	width: calc(100% - 4px);
+	padding: 15px;
+	height: 75vh;
+	border-radius: 20px 20px 0 0;
+	background: linear-gradient(150deg, #89b4ff 0%, #8ba0c9 100%);
+}
+.imgDialog {
+	width: 70%;
+	height: 40%;
+	border-radius: 20px;
+}
+.textContainer img {
+	width: 30px;
+	margin-left: 20px;
+}
+form {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+.closeButton {
+	width: 35px;
+	height: 35px;
+	padding: 5px;
+	border-radius: 50px;
+	background-color: rgba(118, 255, 248, 0.671);
+	border: 0px;
+	font-size: 16px;
+	align-self: flex-end;
+}
+form h2 {
+	font-family: MeFont;
+}
+.textContainer {
+	display: flex;
+	background-color: rgba(111, 235, 228, 0.459);
+	border-radius: 7px;
+	width: 45%;
+	justify-content: center;
+	align-items: center;
+	color: #faf9f9;
+}
+.pay {
+	width: 70%;
+	height: 6vh;
+	background-color: rgba(118, 255, 248, 0.671);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 0px;
+	border-radius: 20px;
+}
+::backdrop {
+	background-color: #75747494;
+}
+.passiveContainer {
+	width: calc(100vw - 40px);
+	width: 100%;
+	white-space: nowrap;
+	overflow-x: auto;
+}
+.cardPassive {
+	display: inline-block;
+	margin-right: 10px;
+}
+.passiveContainer::-webkit-scrollbar {
+	display: none;
 }
